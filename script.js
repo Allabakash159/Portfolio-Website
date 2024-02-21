@@ -18,10 +18,10 @@ if (width<900){
 
     // for body part
     document.getElementById('nav1').style.display='block'
-    document.getElementById('part2').style.height="40vh"
+    document.getElementById('part2').style.height="25vh"
     document.getElementById('part2').style.width="100vw"
     document.getElementById('abodytext').style.width='100vw'
-    document.getElementById('abodytext').style.height='60vh'
+    document.getElementById('abodytext').style.height='55vh'
     // document.getElementById('part2image').style.height="200px"
     // document.getElementById('part2image').style.height="200px"
 
@@ -66,9 +66,16 @@ function addNav(){
     <i class="fa-solid fa-bars" id="bars" onClick="openNav()"></i></div>`)
 }
 function openNav(){
-    document.getElementById('navitem1').style.backgroundColor="grey";
+
     const ope=document.getElementById('menubar')
-    ope.insertAdjacentHTML('beforeend',`<div class="navvertbar" id="navvertbar"></div>`)
+    ope.insertAdjacentHTML('beforeend',`<ul class="navvertbar" id="navvertbar">
+    <li class="mitem"><a style="color:white" href="#nav1" onClick="closeNav()">Home</a></li>
+    <li class="mitem"><a style="color:white" href="#nav2"onClick="closeNav()">About</a></li>
+    <li class="mitem"><a style="color:white" href="#nav3"onClick="closeNav()">Skills</a></li>
+    <li class="mitem"><a style="color:white" href="#nav4"onClick="closeNav()">Projects</a></li>
+    <li class="mitem"><a style="color:white" href="#nav5"onClick="closeNav()">Education</a></li>
+    <li class="mitem"><a style="color:white" href="#nav6"onClick="closeNav()">Contact</a></li>
+    </ul>`)
     let bd=document.getElementById('bars')
     bd.remove()
     let cross=document.getElementById('item7')
